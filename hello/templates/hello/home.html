@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Django App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <p>{{ extra }}</p>
+    <p>This is a simple Django application demonstrating CodeRabbit's code review capabilities.</p>
+
+    <img src="https://via.placeholder.com/150" />
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="test" placeholder="Test input">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        console.log("This is an inline script - not recommended");
+    </script>
+</body>
+</html>
