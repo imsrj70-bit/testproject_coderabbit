@@ -1,4 +1,4 @@
-est PR for CodeRabbit<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@ est PR for CodeRabbit<!DOCTYPE html>
         p {
             font-size: 18px;
         }
-        .badclass { font-weight: bold; }
+
     </style>
 </head>
 <body>
@@ -29,6 +29,7 @@ est PR for CodeRabbit<!DOCTYPE html>
     <img src="https://via.placeholder.com/150" />
 
     <form method="post">
+        {% csrf_token %}
         <input type="text" name="test" placeholder="Test input">
         <button type="submit">Submit</button>
     </form>
