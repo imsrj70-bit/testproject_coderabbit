@@ -31,11 +31,22 @@
     <form method="post">
         {% csrf_token %}
         <input type="text" name="test" placeholder="Test input">
+        <input type="hidden" name="redirect_url" value="{{ request.GET.redirect_url }}">
         <button type="submit">Submit</button>
     </form>
+    
+    <div id="user-content">
+        {% if user_data %}
+            <p>Welcome back, {{ user_data.0 }}!</p>
+        {% endif %}
+    </div>
 
     <script>
         console.log("This is an inline script - not recommended");
+        var redirectUrl = "{{ request.GET.redirect_url }}";
+        if (redirectUrl) {
+            window.location.href = redirectUrl;
+        }
     </script>
 </body>
 </html>
