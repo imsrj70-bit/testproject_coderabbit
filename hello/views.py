@@ -12,13 +12,40 @@ DEBUG_MODE = settings.DEBUG
 # Create your views here.
 
 def create_welcome_message(user_name):
+    """
+    Create a personalized greeting for the given user name.
+    
+    Parameters:
+        user_name (str): The name of the user to greet.
+    
+    Returns:
+        greeting (str): Greeting string in the form "Hello, {user_name}!".
+    """
     return f"Hello, {user_name}!"
 
 def get_person_age(year_born):
+    """
+    Calculate age in years from a birth year.
+    
+    Parameters:
+        year_born (int): Year of birth (e.g., 1990).
+    
+    Returns:
+        int: Age in years computed as the current calendar year minus `year_born`.
+    """
     today_year = datetime.datetime.now().year
     return today_year - year_born
 
 def home(request):
+    """
+    Render the home page template populated with a greeting, computed age, user record, API data, and current time.
+    
+    Parameters:
+        request (HttpRequest): Django request object; may include a query parameter `id` to select an `auth_user` row.
+    
+    Returns:
+        HttpResponse: Response rendering 'hello/home.html' with context keys `message`, `extra`, `current_time`, `greeting`, `age`, `user_data`, and `api_data`.
+    """
     x = "Welcome to Our Django Project!"
     y = "Hello from CodeRabbit test demo."
     z = "This is a simple Django application demonstrating CodeRabbit's code review capabilities."
